@@ -7,7 +7,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  final initial = Routes.splash;
+  final initial = Routes.home;
 
   static final routes = [
     GetPage(

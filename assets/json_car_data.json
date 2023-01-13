@@ -1,153 +1,52 @@
 {
-	"categories": [{
-			"title": "Category 1",
-			"subtitle": "subtitle1",
-			"products": [{
-				"name": "Product Name",
-				"detail": "Details",
-				"image": "image",
-				"date-added": "Jan - 01 - 2022"
-			}]
-		},
-		{
-			"title": "Category 1",
-			"subtitle": "subtitle1",
-			"products": [{
-				"name": "Product Name",
-				"detail": "Details",
-				"image": "image",
-				"date-added": "Jan - 01 - 2022"
-			}]
-		},
-		{
-			"title": "Category 1",
-			"subtitle": "subtitle1",
-			"products": [{
-				"name": "Product Name",
-				"detail": "Details",
-				"image": "image",
-				"date-added": "Jan - 01 - 2022"
-			}]
-		},
-		{
-			"title": "Category 1",
-			"subtitle": "subtitle1",
-			"products": [{
-				"name": "Product Name",
-				"detail": "Details",
-				"image": "image",
-				"date-added": "Jan - 01 - 2022"
-			}]
-		},
-		{
-			"title": "Category 1",
-			"subtitle": "subtitle1",
-			"products": [{
-				"name": "Product Name",
-				"detail": "Details",
-				"image": "image",
-				"date-added": "Jan - 01 - 2022"
-			}]
-		},
-		{
-			"title": "Category 1",
-			"subtitle": "subtitle1",
-			"products": [{
-				"name": "Product Name",
-				"detail": "Details",
-				"image": "image",
-				"date-added": "Jan - 01 - 2022"
-			}]
-		},
-		{
-			"title": "Category 1",
-			"subtitle": "subtitle1",
-			"products": [{
-				"name": "Product Name",
-				"detail": "Details",
-				"image": "image",
-				"date-added": "Jan - 01 - 2022"
-			}]
-		},
-		{
-			"title": "Category 1",
-			"subtitle": "subtitle1",
-			"products": [{
-				"name": "Product Name",
-				"detail": "Details",
-				"image": "image",
-				"date-added": "Jan - 01 - 2022"
-			}]
-		},
-		{
-			"title": "Category 1",
-			"subtitle": "subtitle1",
-			"products": [{
-				"name": "Product Name",
-				"detail": "Details",
-				"image": "image",
-				"date-added": "Jan - 01 - 2022"
-			}]
-		},
-				   {
-			"title": "Category 1",
-			"subtitle": "subtitle1",
-			"products": [{
-				"name": "Product Name",
-				"detail": "Details",
-				"image": "image",
-				"date-added": "Jan - 01 - 2022"
-			}]
-		},
-				   {
-			"title": "Category 1",
-			"subtitle": "subtitle1",
-			"products": [{
-				"name": "Product Name",
-				"detail": "Details",
-				"image": "image",
-				"date-added": "Jan - 01 - 2022"
-			}]
-		},
-				   {
-			"title": "Category 1",
-			"subtitle": "subtitle1",
-			"products": [{
-				"name": "Product Name",
-				"detail": "Details",
-				"image": "image",
-				"date-added": "Jan - 01 - 2022"
-			}]
-		},
-				   {
-			"title": "Category 1",
-			"subtitle": "subtitle1",
-			"products": [{
-				"name": "Product Name",
-				"detail": "Details",
-				"image": "image",
-				"date-added": "Jan - 01 - 2022"
-			}]
-		},
-				   {
-			"title": "Category 1",
-			"subtitle": "subtitle1",
-			"products": [{
-				"name": "Product Name",
-				"detail": "Details",
-				"image": "image",
-				"date-added": "Jan - 01 - 2022"
-			}]
-		},
-				   {
-			"title": "Category 1",
-			"subtitle": "subtitle1",
-			"products": [{
-				"name": "Product Name",
-				"detail": "Details",
-				"image": "image",
-				"date-added": "Jan - 01 - 2022"
-			}]
-		}
-	]
+    "categories": [
+        {
+            "title": "Category 1",
+            "subtitle": "subtitle1",
+            "products": [
+                {
+                    "name": "Product Name",
+                    "detail": "Details",
+                    "image": "image",
+                    "date-added": "Jan - 01 - 2022"
+                },
+                {
+                    "name": "Product Name",
+                    "detail": "Details",
+                    "image": "image",
+                    "date-added": "Jan - 01 - 2022"
+                },
+                {
+                    "name": "Product Name",
+                    "detail": "Details",
+                    "image": "image",
+                    "date-added": "Jan - 01 - 2022"
+                }
+            ]
+        },
+        {
+            "title": "Category 2",
+            "subtitle": "subtitle2",
+            "products": [
+                {
+                    "name": "Product Name",
+                    "detail": "Details",
+                    "image": "image",
+                    "date-added": "Jan - 01 - 2022"
+                },
+                {
+                    "name": "Product Name",
+                    "detail": "Details",
+                    "image": "image",
+                    "date-added": "Jan - 01 - 2022"
+                },
+                {
+                    "name": "Product Name",
+                    "detail": "Details",
+                    "image": "image",
+                    "date-added": "Jan - 01 - 2022"
+                }
+            ]
+        }
+    ]
 }
