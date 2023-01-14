@@ -59,11 +59,11 @@ class CarViewModel extends GetxController {
                 element.name
                     .toString()
                     .toLowerCase()
-                    .contains(searchParams.searchText!.toLowerCase()) ||
+                    .contains(searchParams.searchText.toLowerCase()) ||
                 element.detail
                     .toString()
                     .toLowerCase()
-                    .contains(searchParams.searchText!.toLowerCase()))
+                    .contains(searchParams.searchText.toLowerCase()))
             .toList();
 
         update();
@@ -75,11 +75,11 @@ class CarViewModel extends GetxController {
                 element.dateAdded
                     .toString()
                     .toLowerCase()
-                    .contains(searchParams.dateTime!) ||
+                    .contains(searchParams.dateTime) ||
                 element.detail
                     .toString()
                     .toLowerCase()
-                    .contains(searchParams.dateTime!))
+                    .contains(searchParams.dateTime))
             .toList();
         update();
       } else if (searchParams.isSorted == true) {
