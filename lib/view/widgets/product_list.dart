@@ -29,16 +29,16 @@ class _ProductListState extends State<ProductList> {
     return SingleChildScrollView(
         scrollDirection: Axis.vertical,
         physics: const BouncingScrollPhysics(),
-        child:
-            // List<ProductListModel> productList = widget.productList;
+        child: GetBuilder<CarViewModel>(builder: (controlller) {
+          List<ProductListModel> productList =
+              Get.put(CarViewModel()).allProductList;
 
-            GetBuilder<CarViewModel>(builder: (controlller) {
           return StaggeredGrid.count(
             crossAxisCount: 2,
             mainAxisSpacing: 10,
             crossAxisSpacing: 10,
-            children: List.generate(widget.productList.length, (index) {
-              final product = widget.productList[index];
+            children: List.generate(productList.length, (index) {
+              final product = productList[index];
               return BaseWidget(builder: (context, config, theme) {
                 return Container(
                   width: 150,

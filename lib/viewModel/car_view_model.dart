@@ -9,7 +9,8 @@ class CarViewModel extends GetxController {
   @override
   void onInit() {
     fetchCarData();
-    // fetchProductData(SearchParams());
+    fetchProductData(
+        SearchParams(dateTime: '', isSorted: false, searchText: ''));
 
     super.onInit();
   }
@@ -33,7 +34,6 @@ class CarViewModel extends GetxController {
       List<Categories> carModelList = await CarRepository().fetchCarData();
       _apiResponse = ApiResponse.completed(carModelList);
       // print(_apiResponse.data);
-      fetchProductData(SearchParams());
     } catch (e) {
       _apiResponse = ApiResponse.error(e.toString());
       print(e);
@@ -52,7 +52,9 @@ class CarViewModel extends GetxController {
       List<ProductListModel> carModelList =
           await CarRepository().fetchAllProductData();
       _allProductApiResponse = ApiResponse.completed(carModelList);
-      if (searchParams.searchText == '') {
+      update();
+
+      if (searchParams.searchText.isNotEmpty) {
         print(1);
         List<ProductListModel> tempProductList = _allProductApiResponse.data;
         allProductList = tempProductList
@@ -68,7 +70,7 @@ class CarViewModel extends GetxController {
             .toList();
 
         update();
-      } else if (searchParams.dateTime == '') {
+      } else if (searchParams.dateTime.isNotEmpty) {
         print("{dateTime}");
         List<ProductListModel> tempProductList = _allProductApiResponse.data;
         // final allProductList = tempProductList.sort((a, b) {
@@ -87,11 +89,13 @@ class CarViewModel extends GetxController {
                     .toLowerCase()
                     .contains(searchParams.dateTime!))
             .toList();
+        update();
       } else if (searchParams.isSorted == true) {
         List<ProductListModel> tempProductList = _allProductApiResponse.data;
         tempProductList.sort((a, b) => a.name!.compareTo(b.name!));
         allProductList = tempProductList;
         print(allProductList);
+        update();
       } else {
         print(2);
         allProductList = _allProductApiResponse.data;

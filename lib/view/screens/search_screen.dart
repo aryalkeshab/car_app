@@ -21,8 +21,14 @@ class SearchScreen extends StatefulWidget {
 class _SearchScreenState extends State<SearchScreen> {
   @override
   void initState() {
-    Get.put(CarViewModel()).fetchProductData(SearchParams());
+    Get.put(CarViewModel()).fetchProductData(
+        SearchParams(dateTime: '', isSorted: false, searchText: ''));
     super.initState();
+  }
+
+  void clear() {
+    Get.put(CarViewModel()).fetchProductData(
+        SearchParams(dateTime: '', isSorted: false, searchText: ''));
   }
 
   @override

@@ -1,7 +1,10 @@
 class SearchParams {
-  String? searchText = '';
-  String? dateTime = '';
-  bool? isSorted = false;
+  String searchText = '';
+  String dateTime = '';
+  bool isSorted = false;
 
-  SearchParams({this.searchText, this.dateTime, this.isSorted});
+  SearchParams(
+      {required this.searchText,
+      required this.dateTime,
+      required this.isSorted});
 }
