@@ -4,13 +4,13 @@ A new Flutter project.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+This Flutter project includes the following points.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+i. Appropriate UI design with data from tow local json file one for category and one for product list.
+ii. Create a model.
+iii. Make a reusable widget with clean code.
+iv. Implemented MVVM Architecture.
+v. Implemented search function to search cars by car name.
+vi. Animated splash screen.
+vii. Include Drawer.
+vii. Include search by name, alphabetical order and released date.
