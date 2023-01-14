@@ -31,7 +31,6 @@ class _WishListScreenState extends State<WishListScreen> {
           padding: EdgeInsets.symmetric(horizontal: config.appEdgePadding()),
           child: Builder(builder: (context) {
             List<Products> products = Get.put(CarViewModel()).products;
-            print(products);
             if (products.isNotEmpty) {
               return ListView.builder(
                 itemCount: products.length,

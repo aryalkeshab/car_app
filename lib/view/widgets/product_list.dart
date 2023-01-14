@@ -75,9 +75,8 @@ class _ProductListState extends State<ProductList> {
                                 children: [
                                   Center(
                                     child: Text(
-                                      // product.name.toString(),
-
-                                      product.name!, maxLines: 1,
+                                      product.name!,
+                                      maxLines: 1,
                                       overflow: TextOverflow.ellipsis,
                                       textAlign: TextAlign.center,
                                       style: Theme.of(context)
@@ -85,7 +84,8 @@ class _ProductListState extends State<ProductList> {
                                           .bodyText2!
                                           .copyWith(
                                               fontWeight: FontWeight.w600,
-                                              fontSize: 17),
+                                              fontSize: 17,
+                                              color: theme.primaryColor),
                                     ),
                                   ),
                                   config.verticalSpaceSmall(),

@@ -70,7 +70,7 @@ class _SearchScreenState extends State<SearchScreen> {
                     },
                     controller: searchController,
                     decoration: const InputDecoration(
-                        labelText: "Search by name & details",
+                        labelText: "Search by name",
                         hintText: "Hundai, EV, etc",
                         prefixIcon: Icon(Icons.search),
                         border: OutlineInputBorder(

@@ -1,121 +1,140 @@
 {
-    "categories": [
+  "categories": [
+      {
+      "title": "Ferari",
+      "subtitle": "subtitle2",
+      "products": [
         {
-            "title": "Tesla",
-            "subtitle": "subtitle1",
-            "products": [
-                {
-                    "name": "Keshab",
-                    "detail": "BDetails2",
-                    "image": "image",
-                    "date-added": "2021-12-11"
-                },
-                {
-                    "name": "Product Name",
-                    "detail": "ADetails4",
-                    "image": "image",
-                    "date-added": "2013-01-05"
-                },
-                {
-                    "name": "Product Name",
-                    "detail": "CDetails3",
-                    "image": "image",
-                    "date-added": "2017-10-11"
-                }
-            ]
+          "name": "Ferrari 488 GTB",
+          "released_date": "2022-05-01",
+          "description": "The Ferrari 488 GTB is a high-performance sports car with a sleek design, advanced technology features and powerful performance. It offers a responsive handling and sporty driving experience, making it a great choice for car enthusiasts. ",
+          "price": "$350000",
+          "image": "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
         },
         {
-            "title": "BMW",
-            "subtitle": "subtitle2",
-            "products": [
-                {
-                    "name": "Product Name",
-                    "detail": "Details4",
-                    "image": "image5",
-                    "date-added": "Jan - 01 - 2022"
-                },
-                {
-                    "name": "Product Name",
-                    "detail": "Details6",
-                    "image": "image",
-                    "date-added": "Jan - 01 - 2022"
-                },
-                {
-                    "name": "Product Name",
-                    "detail": "Details7",
-                    "image": "image",
-                    "date-added": "Jan - 01 - 2022"
-                }
-            ]
-        },      {
-            "title": "Ferari",
-            "subtitle": "subtitle2",
-            "products": [
-                {
-                    "name": "Product Name",
-                    "detail": "Details8",
-                    "image": "image",
-                    "date-added": "Jan - 01 - 2022"
-                },
-                {
-                    "name": "Product Name",
-                    "detail": "Details9",
-                    "image": "image",
-                    "date-added": "Jan - 01 - 2022"
-                },
-                {
-                    "name": "Product Name",
-                    "detail": "Details10",
-                    "image": "image",
-                    "date-added": "Jan - 01 - 2022"
-                }
-            ]
-        },      {
-            "title": "Toyota",
-            "subtitle": "subtitle2",
-            "products": [
-                {
-                    "name": "Product Name",
-                    "detail": "Details11",
-                    "image": "image",
-                    "date-added": "Jan - 01 - 2022"
-                },
-                {
-                    "name": "Product Name",
-                    "detail": "Details12",
-                    "image": "image",
-                    "date-added": "Jan - 01 - 2022"
-                },
-                {
-                    "name": "Product Name",
-                    "detail": "Details13",
-                    "image": "image",
-                    "date-added": "Jan - 01 - 2022"
-                }
-            ]
-        },      {
-            "title": "Hyundai",
-            "subtitle": "subtitle2",
-            "products": [
-                {
-                    "name": "Product Name",
-                    "detail": "Details14",
-                    "image": "image",
-                    "date-added": "Jan - 01 - 2022"
-                },
-                {
-                    "name": "Product Name",
-                    "detail": "Details15",
-                    "image": "image",
-                    "date-added": "Jan - 01 - 2022"
-                },
-                {
-                    "name": "Product Name",
-                    "detail": "Details16",
-                    "image": "image",
-                    "date-added": "Jan - 01 - 2022"
-                }
-            ]
+          "name": "Ferrari 812 Superfast",
+          "released_date": "2022-08-01",
+          "description": "The Ferrari 812 Superfast is a high-performance sports car with a sleek design, advanced technology features and powerful performance. It offers a responsive handling and sporty driving experience, making it a great choice for car enthusiasts.",
+          "price": "$450000",
+          "image": "https://images.unsplash.com/photo-1526726538690-5cbf956ae2fd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+        },
+        {
+          "name": "Ferrari SF90 Stradale",
+          "released_date": "2022-11-01",
+          "description": "The Ferrari SF90 Stradale is a plug-in hybrid sports car with a sleek design and advanced technology features. It offers a powerful performance and an all-electric range of up to 25 miles. It also features advanced aerodynamics and lightweight construction for optimal efficiency.",
+          "price": "$600000",
+          "image": "https://images.unsplash.com/photo-1583121274602-3e2820c69888?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
         }
-    ]
+      ]
+    },
+    {
+      "title": "Tesla",
+      "subtitle": "subtitle1",
+      "products": [
+        {
+          "name": "Tesla Model S",
+          "released_date": "2012-06-22",
+          "description": "The Tesla Model S is a full-sized electric sedan with a sleek design and high-performance specs. It has a range of up to 370 miles on a single charge and can accelerate from 0-60 mph in as little as 2.4 seconds.",
+          "price": "$75000",
+      "image": "https://images.pexels.com/photos/1637859/pexels-photo-1637859.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        },
+        {
+          "name": "Tesla Model 3",
+          "released_date": "2016-03-31",
+          "description": "The Tesla Model 3 is a compact electric sedan with a sleek design, high-performance specs and advanced technology features. It has a range of up to 358 miles on a single charge and can accelerate from 0-60 mph in as little as 3.2 seconds.",
+          "price": "$35000",
+      "image": "https://images.pexels.com/photos/210019/pexels-photo-210019.jpeg?auto=compress&cs=tinysrgb&w=600"
+        },
+        {
+          "name": "Tesla Model X",
+          "released_date": "2015-09-29",
+          "description": "The Tesla Model X is a full-sized electric SUV with falcon-wing doors and a spacious, luxurious interior. It has a range of up to 371 miles on a single charge and can accelerate from 0-60 mph in as little as 2.6 seconds.",
+          "price": "$81000",
+      "image": "https://images.pexels.com/photos/1805053/pexels-photo-1805053.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        }
+      ]
+    },
+    {
+      "title": "BMW",
+      "subtitle": "subtitle2",
+      "products": [
+        {
+          "name": "BMW M3",
+          "released_date": "2022-03-01",
+          "description": "The BMW M3 is a high-performance version of the BMW 3 Series, featuring a powerful engine and sport-tuned suspension. It is a luxury sedan with a sleek design and advanced technology features. ",
+          "price": "$77000",
+      "image": "https://images.unsplash.com/photo-1542362567-b07e54358753?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+        },
+        {
+          "name": "BMW X5",
+          "released_date": "2022-06-01",
+          "description": "The BMW X5 is a luxury SUV with a spacious and comfortable interior, advanced technology features, and versatile performance capabilities. It offers a smooth ride and responsive handling, making it a great choice for both city and highway driving.",
+          "price": "$67000",
+      "image": "https://images.unsplash.com/photo-1493238792000-8113da705763?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+        },
+        {
+          "name": "BMW i8",
+          "released_date": "2022-09-01",
+          "description": "The BMW i8 is a plug-in hybrid sports car with a futuristic design and advanced technology features. It offers a powerful performance and an all-electric range of up to 18 miles. It also features advanced aerodynamics and lightweight construction for optimal efficiency.",
+          "price": "$150000",
+      "image": "https://images.unsplash.com/photo-1553440569-bcc63803a83d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=825&q=80"
+        }
+      ]
+    },
+
+    {
+      "title": "Toyota",
+      "subtitle": "subtitle2",
+      "products": [
+        {
+          "name": "Toyota Camry",
+          "released_date": "2022-09-01",
+          "description": "The Toyota Camry is a popular midsize sedan with a sleek design, comfortable interior and advanced technology features. It offers a smooth and comfortable ride, making it a great choice for daily commutes and long road trips.",
+          "price": "$25000",
+          "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+        },
+        {
+          "name": "Toyota RAV4",
+          "released_date": "2022-11-01",
+          "description": "The Toyota RAV4 is a compact SUV with a sleek design, spacious interior and advanced technology features. It offers a smooth and comfortable ride, making it a great choice for city driving and off-roading adventures.",
+          "price": "$28000",
+          "image": "https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=452&q=80"
+        },
+        {
+          "name": "Toyota Supra",
+          "released_date": "2022-07-01",
+          "description": "The Toyota Supra is a high-performance sports car with a sleek design and advanced technology features. It offers a powerful performance and responsive handling, making it a great choice for sporty driving enthusiasts.",
+          "price": "$55000",
+          "image": "https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80"
+        }
+      ]
+    },
+    {
+      "title": "Hyundai",
+      "subtitle": "subtitle2",
+      "products": [
+        {
+          "name": "Hyundai Sonata",
+          "released_date": "2022-06-01",
+          "description": "The Hyundai Sonata is a popular midsize sedan with a sleek design, comfortable interior and advanced technology features. It offers a smooth and comfortable ride, making it a great choice for daily commutes and long road trips.",
+          "price": "$24000",
+      "image": "https://images.unsplash.com/photo-1616422285623-13ff0162193c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=431&q=80"
+        },
+        {
+          "name": "Hyundai Tucson",
+          "released_date": "2022-09-01",
+          "description": "The Hyundai Tucson is a compact SUV with a sleek design, spacious interior and advanced technology features. It offers a smooth and comfortable ride, making it a great choice for city driving and off-roading adventures.",
+          "price": "$28000",
+          "image": "https://images.unsplash.com/photo-1494905998402-395d579af36f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+        },
+        {
+          "name": "Hyundai Veloster",
+          "released_date": "2022-11-01",
+          "description": "The Hyundai Veloster is a compact sports car with a sleek design, advanced technology features and powerful performance. It offers a responsive handling and sporty driving experience, making it a great choice for car enthusiasts.",
+          "price": "$22000",
+          "image": "https://images.unsplash.com/photo-1502877338535-766e1452684a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80"
+        }
+      ]
+    }
+  ]
 }

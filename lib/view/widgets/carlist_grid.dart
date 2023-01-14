@@ -1,6 +1,7 @@
 import 'package:car_app/repository/apiResponse/car_model.dart';
 import 'package:car_app/repository/constants/base_widget.dart';
 import 'package:car_app/repository/constants/cached_network_image_builder.dart';
+import 'package:car_app/view/widgets/text_describe.dart';
 import 'package:car_app/viewModel/car_view_model.dart';
 
 import 'package:flutter/material.dart';
@@ -20,9 +21,6 @@ class ProductListViewBuilder extends StatefulWidget {
 }
 
 class _ProductListViewBuilderState extends State<ProductListViewBuilder> {
-  List<Products> favouriteList = [];
-  List<bool> _isFavorited = [];
-
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -49,11 +47,14 @@ class _ProductListViewBuilderState extends State<ProductListViewBuilder> {
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        SizedBox(
-                          height: 98,
-                          child: CustomCachedNetworkImage(
-                            product.image,
-                            fit: BoxFit.cover,
+                        Center(
+                          child: SizedBox(
+                            height: 98,
+                            width: 150,
+                            child: CustomCachedNetworkImage(
+                              product.image,
+                              fit: BoxFit.fill,
+                            ),
                           ),
                         ),
                         config.verticalSpaceSmall(),
@@ -63,34 +64,34 @@ class _ProductListViewBuilderState extends State<ProductListViewBuilder> {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(
-                                // product.name.toString(),
-
-                                product.name!, maxLines: 1,
-                                overflow: TextOverflow.ellipsis,
-                                style: Theme.of(context)
-                                    .textTheme
-                                    .bodyText2!
-                                    .copyWith(fontWeight: FontWeight.w600),
+                              Padding(
+                                padding: const EdgeInsets.symmetric(
+                                    horizontal: 10.0),
+                                child: Center(
+                                  child: Text(
+                                    product.name!,
+                                    maxLines: 1,
+                                    overflow: TextOverflow.ellipsis,
+                                    textAlign: TextAlign.center,
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .bodyText2!
+                                        .copyWith(
+                                            fontWeight: FontWeight.w600,
+                                            fontSize: 17,
+                                            color: theme.primaryColor),
+                                  ),
+                                ),
                               ),
-                              config.verticalSpaceVerySmall(),
-                              Text(
-                                product.dateAdded!,
-                                maxLines: 1,
-                                overflow: TextOverflow.ellipsis,
-                                style: Theme.of(context)
-                                    .textTheme
-                                    .bodyText2!
-                                    .copyWith(fontWeight: FontWeight.w600),
+                              config.verticalSpaceSmall(),
+                              NameDescribe(
+                                topic: 'Date:',
+                                data: product.dateAdded,
                               ),
-                              config.verticalSpaceVerySmall(),
-                              Text(
-                                product.detail.toString(),
-                                style: Theme.of(context)
-                                    .textTheme
-                                    .bodyText2!
-                                    .copyWith(
-                                        color: Theme.of(context).primaryColor),
+                              config.verticalSpaceSmall(),
+                              NameDescribe(
+                                topic: 'Car Price:',
+                                data: product.price,
                               ),
                             ],
                           ),
@@ -110,8 +111,13 @@ class _ProductListViewBuilderState extends State<ProductListViewBuilder> {
                       },
                       child: IconButton(
                         icon: product.isFavorited!
-                            ? const Icon(Icons.favorite)
-                            : const Icon(Icons.favorite_border),
+                            ? const Icon(
+                                Icons.favorite,
+                              )
+                            : const Icon(
+                                Icons.favorite_border,
+                                color: Colors.red,
+                              ),
                         color: product.isFavorited! ? Colors.red : null,
                         onPressed: () {
                           if (product.isFavorited!) {

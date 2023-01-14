@@ -1,6 +1,7 @@
 import 'package:car_app/repository/apiResponse/car_model.dart';
 import 'package:car_app/repository/constants/base_widget.dart';
 import 'package:car_app/repository/constants/cached_network_image_builder.dart';
+import 'package:car_app/view/widgets/text_describe.dart';
 import 'package:car_app/viewModel/car_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -41,17 +42,30 @@ class WishlistCard extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      Text("${favouriteListProduct.name}"),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                        child: Text(
+                          favouriteListProduct.name!,
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          textAlign: TextAlign.left,
+                          style: Theme.of(context)
+                              .textTheme
+                              .bodyText2!
+                              .copyWith(
+                                  fontWeight: FontWeight.w600, fontSize: 17),
+                        ),
+                      ),
                       config.verticalSpaceSmall(),
-                      Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Text(
-                              " ${favouriteListProduct.detail}",
-                              style: themeData.textTheme.bodyText1
-                                  ?.copyWith(fontWeight: FontWeight.w600),
-                            ),
-                          ]),
+                      NameDescribe(
+                        topic: 'Released Date:',
+                        data: favouriteListProduct.dateAdded,
+                      ),
+                      config.verticalSpaceSmall(),
+                      NameDescribe(
+                        topic: 'Car Price:',
+                        data: favouriteListProduct.price,
+                      ),
                     ],
                   ),
                 )

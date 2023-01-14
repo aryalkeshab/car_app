@@ -22,7 +22,7 @@ class SplashScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Image.asset(
-                    UIAssets.appLogo,
+                    UIAssets.appIcon,
                     filterQuality: FilterQuality.high,
                     width: controller.animation.value * 500,
                     height: controller.animation.value * 550,

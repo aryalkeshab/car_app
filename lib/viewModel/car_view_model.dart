@@ -33,10 +33,8 @@ class CarViewModel extends GetxController {
     try {
       List<Categories> carModelList = await CarRepository().fetchCarData();
       _apiResponse = ApiResponse.completed(carModelList);
-      // print(_apiResponse.data);
     } catch (e) {
       _apiResponse = ApiResponse.error(e.toString());
-      print(e);
     }
     update();
   }
@@ -55,7 +53,6 @@ class CarViewModel extends GetxController {
       update();
 
       if (searchParams.searchText.isNotEmpty) {
-        print(1);
         List<ProductListModel> tempProductList = _allProductApiResponse.data;
         allProductList = tempProductList
             .where((element) =>
@@ -71,13 +68,8 @@ class CarViewModel extends GetxController {
 
         update();
       } else if (searchParams.dateTime.isNotEmpty) {
-        print("{dateTime}");
         List<ProductListModel> tempProductList = _allProductApiResponse.data;
-        // final allProductList = tempProductList.sort((a, b) {
-        //   //sorting in ascending order
-        //   return DateTime.parse(b.dateAdded!)
-        //       .compareTo(DateTime.parse(a.dateAdded!));
-        // });
+
         allProductList = tempProductList
             .where((element) =>
                 element.dateAdded
@@ -94,56 +86,15 @@ class CarViewModel extends GetxController {
         List<ProductListModel> tempProductList = _allProductApiResponse.data;
         tempProductList.sort((a, b) => a.name!.compareTo(b.name!));
         allProductList = tempProductList;
-        print(allProductList);
+
         update();
       } else {
-        print(2);
         allProductList = _allProductApiResponse.data;
         update();
       }
     } catch (e) {
       _allProductApiResponse = ApiResponse.error(e.toString());
-      print(e);
     }
     update();
   }
-
-  // fetchProductData(
-  //   String value,
-
-  //   // DateTime dateTime,
-  //   // bool isSort,
-  // ) async {
-  //   update();
-  //   try {
-  //     List<ProductListModel> carModelList =
-  //         await CarRepository().fetchAllProductData();
-  //     _allProductApiResponse = ApiResponse.completed(carModelList);
-  //     if (value.isNotEmpty) {
-  //       print(1);
-  //       List<ProductListModel> tempProductList = _allProductApiResponse.data;
-  //       allProductList = tempProductList
-  //           .where((element) =>
-  //               element.name
-  //                   .toString()
-  //                   .toLowerCase()
-  //                   .contains(value.toLowerCase()) ||
-  //               element.detail
-  //                   .toString()
-  //                   .toLowerCase()
-  //                   .contains(value.toLowerCase()))
-  //           .toList();
-
-  //       update();
-  //     } else {
-  //       print(2);
-  //       allProductList = _allProductApiResponse.data;
-  //       update();
-  //     }
-  //   } catch (e) {
-  //     _allProductApiResponse = ApiResponse.error(e.toString());
-  //     print(e);
-  //   }
-  //   update();
-  // }
 }
