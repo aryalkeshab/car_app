@@ -66,7 +66,17 @@ class _ProductListViewBuilderState extends State<ProductListViewBuilder> {
                               Text(
                                 // product.name.toString(),
 
-                                ":hello", maxLines: 1,
+                                product.name!, maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .bodyText2!
+                                    .copyWith(fontWeight: FontWeight.w600),
+                              ),
+                              config.verticalSpaceVerySmall(),
+                              Text(
+                                product.dateAdded!,
+                                maxLines: 1,
                                 overflow: TextOverflow.ellipsis,
                                 style: Theme.of(context)
                                     .textTheme
@@ -119,11 +129,6 @@ class _ProductListViewBuilderState extends State<ProductListViewBuilder> {
                         },
                       ),
                     ),
-                    // child:
-
-                    //   //  Icon(Icons.favorite_border,
-                    //   //     color: theme.primaryColor),
-                    // )),
                   ),
                 ],
               ),

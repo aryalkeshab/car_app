@@ -22,36 +22,34 @@ class _WishListScreenState extends State<WishListScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return BaseWidget(
-      builder: (context, config, themeData) {
-        return Scaffold(
-          appBar: AppBar(
-            title: const Text('Wishlist'),
-          ),
-          body: Padding(
-            padding: EdgeInsets.symmetric(horizontal: config.appEdgePadding()),
-            child: GetBuilder<CarViewModel>(builder: (context) {
-              List<Products> products = Get.put(CarViewModel()).products;
-              print(products);
-              if (products.isNotEmpty) {
-                return ListView.builder(
-                  itemCount: products.length,
-                  itemBuilder: (context, index) {
-                    final productList = products[index];
-                    return WishlistCard(
-                      favouriteListProduct: productList,
-                    );
-                  },
-                );
-              } else {
-                return const Center(
-                  child: Text("No Items in Favourite List"),
-                );
-              }
-            }),
-          ),
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Wishlist'),
+      ),
+      body: BaseWidget(builder: (context, config, themeData) {
+        return Padding(
+          padding: EdgeInsets.symmetric(horizontal: config.appEdgePadding()),
+          child: Builder(builder: (context) {
+            List<Products> products = Get.put(CarViewModel()).products;
+            print(products);
+            if (products.isNotEmpty) {
+              return ListView.builder(
+                itemCount: products.length,
+                itemBuilder: (context, index) {
+                  final productList = products[index];
+                  return WishlistCard(
+                    favouriteListProduct: productList,
+                  );
+                },
+              );
+            } else {
+              return const Center(
+                child: Text("No Items in Favourite List"),
+              );
+            }
+          }),
         );
-      },
+      }),
     );
   }
 }

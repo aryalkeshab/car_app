@@ -15,7 +15,8 @@ class CustomCachedNetworkImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CachedNetworkImage(
-      imageUrl: imageUrl!,
+      // imageUrl!
+      imageUrl: UIAssets.appLogo,
       imageBuilder: (context, imageProvider) => AspectRatio(
         aspectRatio: aspectRatio ?? 1,
         child: Container(

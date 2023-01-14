@@ -35,7 +35,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final carViewModel = Get.put(CarViewModel());
+    final carViewModel = Get.find<CarViewModel>();
     final config = SizeConfig(context);
 
     return Scaffold(
@@ -111,14 +111,6 @@ class _HomeScreenState extends State<HomeScreen> {
               CategoryMenu(
                 categories: categories,
               ),
-              // config.verticalSpaceLarge(),
-              // Builder(
-              //   builder: (context) {
-              //     List<Products> products = categories[0].products!;
-
-              //     return ProductListViewBuilder(productList: products);
-              //   },
-              // ),
             ],
           );
         } else {

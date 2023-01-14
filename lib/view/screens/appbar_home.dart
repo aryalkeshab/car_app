@@ -1,4 +1,6 @@
 import 'package:car_app/repository/constants/base_widget.dart';
+import 'package:car_app/repository/routes/app_pages.dart';
+import 'package:car_app/view/screens/search_screen.dart';
 import 'package:car_app/view/screens/wishlist_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -23,28 +25,28 @@ class AppBarHome extends StatelessWidget implements PreferredSizeWidget {
           padding: EdgeInsets.only(left: config.appHorizontalPaddingMedium()),
           child: Builder(builder: (context) {
             return InkWell(
-              onTap: () {},
-              child: Icon(CupertinoIcons.line_horizontal_3_decrease),
+              onTap: () {
+                Scaffold.of(context).openDrawer();
+              },
+              child: const Icon(CupertinoIcons.line_horizontal_3_decrease),
             );
           }),
         ),
         leadingWidth: 30,
         centerTitle: true,
-        title: Text("Car Collection"),
+        title: const Text("Car Collection"),
         actions: [
           IconButton(
             icon: const Icon(Icons.favorite_border),
             onPressed: () {
-              Get.to(WishListScreen());
+              Get.toNamed(Routes.wishlist);
             },
-          ),
-          IconButton(
-            icon: Icon(Icons.filter_alt_outlined),
-            onPressed: () {},
           ),
         ],
         bottom: SearchBarContainer(
-          onPressed: () {},
+          onPressed: () {
+            Get.toNamed(Routes.search);
+          },
         ),
       );
     });

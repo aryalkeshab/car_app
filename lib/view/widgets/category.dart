@@ -63,7 +63,6 @@ class _CategoryMenuState extends State<CategoryMenu> {
             config.verticalSpaceLarge(),
             Builder(
               builder: (context) {
-                print(categoriesIndex);
                 List<Products> products =
                     widget.categories[categoriesIndex].products!;
 

@@ -1,20 +1,25 @@
 import 'package:car_app/repository/apiResponse/car_model.dart';
+import 'package:car_app/repository/apiResponse/product_model.dart';
+import 'package:car_app/repository/api_request/search_params.dart';
 import 'package:car_app/repository/constants/api_response.dart';
-import 'package:car_app/repository/constants/snackbar.dart';
-import 'package:car_app/repository/constants/toast.dart';
 import 'package:car_app/repository/services/api_impl.dart';
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class CarViewModel extends GetxController {
   @override
   void onInit() {
     fetchCarData();
+    // fetchProductData(SearchParams());
+
     super.onInit();
   }
 
   List<Products> products = [];
   List<bool> isFavorited = [];
+
+  List<ProductListModel> allProductList = [];
+
+  List<Products> tempsearchList = [];
 
   ApiResponse _apiResponse = ApiResponse.initial('Empty data');
 
@@ -27,7 +32,8 @@ class CarViewModel extends GetxController {
     try {
       List<Categories> carModelList = await CarRepository().fetchCarData();
       _apiResponse = ApiResponse.completed(carModelList);
-      print(_apiResponse.data);
+      // print(_apiResponse.data);
+      fetchProductData(SearchParams());
     } catch (e) {
       _apiResponse = ApiResponse.error(e.toString());
       print(e);
@@ -35,24 +41,105 @@ class CarViewModel extends GetxController {
     update();
   }
 
-  // ApiResponse _addToCartResponse = ApiResponse();
+  ApiResponse _allProductApiResponse = ApiResponse.initial('Empty data');
 
-  // set addToCartResponse(ApiResponse response) {
-  //   _addToCartResponse = response;
+  ApiResponse get allProductApiResponse {
+    return _allProductApiResponse;
+  }
+
+  fetchProductData(SearchParams searchParams) async {
+    try {
+      List<ProductListModel> carModelList =
+          await CarRepository().fetchAllProductData();
+      _allProductApiResponse = ApiResponse.completed(carModelList);
+      if (searchParams.searchText == '') {
+        print(1);
+        List<ProductListModel> tempProductList = _allProductApiResponse.data;
+        allProductList = tempProductList
+            .where((element) =>
+                element.name
+                    .toString()
+                    .toLowerCase()
+                    .contains(searchParams.searchText!.toLowerCase()) ||
+                element.detail
+                    .toString()
+                    .toLowerCase()
+                    .contains(searchParams.searchText!.toLowerCase()))
+            .toList();
+
+        update();
+      } else if (searchParams.dateTime == '') {
+        print("{dateTime}");
+        List<ProductListModel> tempProductList = _allProductApiResponse.data;
+        // final allProductList = tempProductList.sort((a, b) {
+        //   //sorting in ascending order
+        //   return DateTime.parse(b.dateAdded!)
+        //       .compareTo(DateTime.parse(a.dateAdded!));
+        // });
+        allProductList = tempProductList
+            .where((element) =>
+                element.dateAdded
+                    .toString()
+                    .toLowerCase()
+                    .contains(searchParams.dateTime!) ||
+                element.detail
+                    .toString()
+                    .toLowerCase()
+                    .contains(searchParams.dateTime!))
+            .toList();
+      } else if (searchParams.isSorted == true) {
+        List<ProductListModel> tempProductList = _allProductApiResponse.data;
+        tempProductList.sort((a, b) => a.name!.compareTo(b.name!));
+        allProductList = tempProductList;
+        print(allProductList);
+      } else {
+        print(2);
+        allProductList = _allProductApiResponse.data;
+        update();
+      }
+    } catch (e) {
+      _allProductApiResponse = ApiResponse.error(e.toString());
+      print(e);
+    }
+    update();
+  }
+
+  // fetchProductData(
+  //   String value,
+
+  //   // DateTime dateTime,
+  //   // bool isSort,
+  // ) async {
+  //   update();
+  //   try {
+  //     List<ProductListModel> carModelList =
+  //         await CarRepository().fetchAllProductData();
+  //     _allProductApiResponse = ApiResponse.completed(carModelList);
+  //     if (value.isNotEmpty) {
+  //       print(1);
+  //       List<ProductListModel> tempProductList = _allProductApiResponse.data;
+  //       allProductList = tempProductList
+  //           .where((element) =>
+  //               element.name
+  //                   .toString()
+  //                   .toLowerCase()
+  //                   .contains(value.toLowerCase()) ||
+  //               element.detail
+  //                   .toString()
+  //                   .toLowerCase()
+  //                   .contains(value.toLowerCase()))
+  //           .toList();
+
+  //       update();
+  //     } else {
+  //       print(2);
+  //       allProductList = _allProductApiResponse.data;
+  //       update();
+  //     }
+  //   } catch (e) {
+  //     _allProductApiResponse = ApiResponse.error(e.toString());
+  //     print(e);
+  //   }
   //   update();
   // }
-
-  // ApiResponse get addToCartResponse => _addToCartResponse;
-
-  // addToCart(BuildContext context, ) async {
-  //   addToCartResponse =
-  //       // await Get.find<CartRepository>().addToCartItems(cartParams);
-  //   if (addToCartResponse.hasError) {
-  //     AppSnackbar.showError(context: context, message: addToCartResponse.error);
-  //   }
-  //   if (addToCartResponse.hasData) {
-  //     showSuccessToast(addToCartResponse.data);
-  //   }
-  // }
-
 }

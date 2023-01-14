@@ -1,0 +1,56 @@
+{
+     "products": [
+                {
+                    "name": "Keshab",
+                    "detail": "BDetails2",
+                    "image": "image",
+                    "date-added": "2023-01-10"
+                },
+                {
+                    "name": "Product Name",
+                    "detail": "ADetails4",
+                    "image": "image",
+                    "date-added": "2013-01-05"
+                },
+                {
+                    "name": "Product Name",
+                    "detail": "CDetails3",
+                    "image": "image",
+                    "date-added": "2017-10-11"
+                },  {
+                    "name": "Keshab",
+                    "detail": "BDetails2",
+                    "image": "image",
+                    "date-added": "2021-12-11"
+                },
+                {
+                    "name": "Product Name",
+                    "detail": "ADetails4",
+                    "image": "image",
+                    "date-added": "2013-01-05"
+                },
+                {
+                    "name": "Product Name",
+                    "detail": "CDetails3",
+                    "image": "image",
+                    "date-added": "2017-10-11"
+                },  {
+                    "name": "Keshab",
+                    "detail": "BDetails2",
+                    "image": "image",
+                    "date-added": "2021-12-11"
+                },
+                {
+                    "name": "Product Name",
+                    "detail": "ADetails4",
+                    "image": "image",
+                    "date-added": "2013-01-05"
+                },
+                {
+                    "name": "Product Name",
+                    "detail": "CDetails3",
+                    "image": "image",
+                    "date-added": "2017-10-11"
+                }
+            ]
+}

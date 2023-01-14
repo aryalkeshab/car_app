@@ -5,22 +5,22 @@
             "subtitle": "subtitle1",
             "products": [
                 {
-                    "name": "Product Name",
-                    "detail": "Details1",
+                    "name": "Keshab",
+                    "detail": "BDetails2",
                     "image": "image",
-                    "date-added": "Jan - 01 - 2022"
+                    "date-added": "2021-12-11"
                 },
                 {
                     "name": "Product Name",
-                    "detail": "Details2",
+                    "detail": "ADetails4",
                     "image": "image",
-                    "date-added": "Jan - 01 - 2022"
+                    "date-added": "2013-01-05"
                 },
                 {
                     "name": "Product Name",
-                    "detail": "Details3",
+                    "detail": "CDetails3",
                     "image": "image",
-                    "date-added": "Jan - 01 - 2022"
+                    "date-added": "2017-10-11"
                 }
             ]
         },
