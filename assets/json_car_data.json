@@ -6,19 +6,19 @@
             "products": [
                 {
                     "name": "Product Name",
-                    "detail": "Details",
+                    "detail": "Details1",
                     "image": "image",
                     "date-added": "Jan - 01 - 2022"
                 },
                 {
                     "name": "Product Name",
-                    "detail": "Details",
+                    "detail": "Details2",
                     "image": "image",
                     "date-added": "Jan - 01 - 2022"
                 },
                 {
                     "name": "Product Name",
-                    "detail": "Details",
+                    "detail": "Details3",
                     "image": "image",
                     "date-added": "Jan - 01 - 2022"
                 }
@@ -30,19 +30,88 @@
             "products": [
                 {
                     "name": "Product Name",
-                    "detail": "Details",
+                    "detail": "Details4",
+                    "image": "image5",
+                    "date-added": "Jan - 01 - 2022"
+                },
+                {
+                    "name": "Product Name",
+                    "detail": "Details6",
                     "image": "image",
                     "date-added": "Jan - 01 - 2022"
                 },
                 {
                     "name": "Product Name",
-                    "detail": "Details",
+                    "detail": "Details7",
+                    "image": "image",
+                    "date-added": "Jan - 01 - 2022"
+                }
+            ]
+        },      {
+            "title": "Category 3",
+            "subtitle": "subtitle2",
+            "products": [
+                {
+                    "name": "Product Name",
+                    "detail": "Details8",
                     "image": "image",
                     "date-added": "Jan - 01 - 2022"
                 },
                 {
                     "name": "Product Name",
-                    "detail": "Details",
+                    "detail": "Details9",
+                    "image": "image",
+                    "date-added": "Jan - 01 - 2022"
+                },
+                {
+                    "name": "Product Name",
+                    "detail": "Details10",
+                    "image": "image",
+                    "date-added": "Jan - 01 - 2022"
+                }
+            ]
+        },      {
+            "title": "Category 4",
+            "subtitle": "subtitle2",
+            "products": [
+                {
+                    "name": "Product Name",
+                    "detail": "Details11",
+                    "image": "image",
+                    "date-added": "Jan - 01 - 2022"
+                },
+                {
+                    "name": "Product Name",
+                    "detail": "Details12",
+                    "image": "image",
+                    "date-added": "Jan - 01 - 2022"
+                },
+                {
+                    "name": "Product Name",
+                    "detail": "Details13",
+                    "image": "image",
+                    "date-added": "Jan - 01 - 2022"
+                }
+            ]
+        },      {
+            "title": "Category 5",
+            "subtitle": "subtitle2",
+            "products": [
+                {
+                    "name": "Product Name",
+                    "detail": "Details14",
+                    "image": "image",
+                    "date-added": "Jan - 01 - 2022"
+                },
+                {
+                    "name": "Product Name",
+                    "detail": "Details15",
+                    "image": "image",
+                    "date-added": "Jan - 01 - 2022"
+                },
+                {
+                    "name": "Product Name",
+                    "detail": "Details16",
                     "image": "image",
                     "date-added": "Jan - 01 - 2022"
                 }

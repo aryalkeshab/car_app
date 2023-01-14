@@ -55,8 +55,10 @@ class Products {
   String? detail;
   String? image;
   String? dateAdded;
+  bool? isFavorited = false;
 
-  Products({this.name, this.detail, this.image, this.dateAdded});
+  Products(
+      {this.name, this.detail, this.image, this.dateAdded, this.isFavorited});
 
   Products.fromJson(Map<String, dynamic> json) {
     name = json['name'];

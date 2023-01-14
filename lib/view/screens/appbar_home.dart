@@ -1,6 +1,8 @@
 import 'package:car_app/repository/constants/base_widget.dart';
+import 'package:car_app/view/screens/wishlist_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class AppBarHome extends StatelessWidget implements PreferredSizeWidget {
   // final Widget title;
@@ -32,7 +34,9 @@ class AppBarHome extends StatelessWidget implements PreferredSizeWidget {
         actions: [
           IconButton(
             icon: const Icon(Icons.favorite_border),
-            onPressed: () {},
+            onPressed: () {
+              Get.to(WishListScreen());
+            },
           ),
           IconButton(
             icon: Icon(Icons.filter_alt_outlined),

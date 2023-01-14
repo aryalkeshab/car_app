@@ -101,24 +101,31 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       body: GetBuilder<CarViewModel>(builder: (controller) {
         final result = carViewModel.response;
-        print(result);
-        // List<Products> carDetails = result.data as List<Products>;
 
-        // if (result.hasData) {
-        // List<CarModel> carDetails = result.data;
-        List<Products> products = [];
-        List<Categories> categories = [];
+        if (result.hasData) {
+          List<Categories> categories = result.data;
 
-        return Column(
-          children: [
-            config.verticalSpaceMedium(),
-            CategoryMenu(
-              categories: categories,
-            ),
-            config.verticalSpaceLarge(),
-            ProductListViewBuilder(productList: products),
-          ],
-        );
+          return Column(
+            children: [
+              config.verticalSpaceMedium(),
+              CategoryMenu(
+                categories: categories,
+              ),
+              // config.verticalSpaceLarge(),
+              // Builder(
+              //   builder: (context) {
+              //     List<Products> products = categories[0].products!;
+
+              //     return ProductListViewBuilder(productList: products);
+              //   },
+              // ),
+            ],
+          );
+        } else {
+          return const Center(
+            child: CircularProgressIndicator(),
+          );
+        }
       }),
     );
   }

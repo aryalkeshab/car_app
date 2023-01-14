@@ -9,8 +9,12 @@ import 'package:get/get.dart';
 class CarViewModel extends GetxController {
   @override
   void onInit() {
+    fetchCarData();
     super.onInit();
   }
+
+  List<Products> products = [];
+  List<bool> isFavorited = [];
 
   ApiResponse _apiResponse = ApiResponse.initial('Empty data');
 
@@ -18,11 +22,12 @@ class CarViewModel extends GetxController {
     return _apiResponse;
   }
 
-  Future<void> fetchCarData() async {
+  fetchCarData() async {
     update();
     try {
-      // List<CarModel> carModelList = await CarRepository().fetchCarData();
-      // _apiResponse = ApiResponse.completed(carModelList);
+      List<Categories> carModelList = await CarRepository().fetchCarData();
+      _apiResponse = ApiResponse.completed(carModelList);
+      print(_apiResponse.data);
     } catch (e) {
       _apiResponse = ApiResponse.error(e.toString());
       print(e);
@@ -50,5 +55,4 @@ class CarViewModel extends GetxController {
   //   }
   // }
 
-  CarModel carModel = CarModel();
 }
