@@ -1,7 +1,7 @@
 {
     "categories": [
         {
-            "title": "Category 1",
+            "title": "Tesla",
             "subtitle": "subtitle1",
             "products": [
                 {
@@ -25,7 +25,7 @@
             ]
         },
         {
-            "title": "Category 2",
+            "title": "BMW",
             "subtitle": "subtitle2",
             "products": [
                 {
@@ -48,7 +48,7 @@
                 }
             ]
         },      {
-            "title": "Category 3",
+            "title": "Ferari",
             "subtitle": "subtitle2",
             "products": [
                 {
@@ -71,7 +71,7 @@
                 }
             ]
         },      {
-            "title": "Category 4",
+            "title": "Toyota",
             "subtitle": "subtitle2",
             "products": [
                 {
@@ -94,7 +94,7 @@
                 }
             ]
         },      {
-            "title": "Category 5",
+            "title": "Hyundai",
             "subtitle": "subtitle2",
             "products": [
                 {

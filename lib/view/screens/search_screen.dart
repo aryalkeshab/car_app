@@ -8,6 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get.dart';
+import 'package:intl/intl.dart';
 
 import '../../viewModel/car_view_model.dart';
 
@@ -19,6 +20,7 @@ class SearchScreen extends StatefulWidget {
 }
 
 class _SearchScreenState extends State<SearchScreen> {
+  TextEditingController searchController = TextEditingController();
   @override
   void initState() {
     Get.put(CarViewModel()).fetchProductData(
@@ -29,6 +31,7 @@ class _SearchScreenState extends State<SearchScreen> {
   void clear() {
     Get.put(CarViewModel()).fetchProductData(
         SearchParams(dateTime: '', isSorted: false, searchText: ''));
+    searchController.text = '';
   }
 
   @override
@@ -40,6 +43,13 @@ class _SearchScreenState extends State<SearchScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Search'),
+        actions: [
+          IconButton(
+              onPressed: () {
+                clear();
+              },
+              icon: const Icon(Icons.delete))
+        ],
       ),
       body: SingleChildScrollView(
           child: Padding(
@@ -58,6 +68,7 @@ class _SearchScreenState extends State<SearchScreen> {
                       carViewModel.fetchProductData(SearchParams(
                           searchText: value, dateTime: '', isSorted: false));
                     },
+                    controller: searchController,
                     decoration: const InputDecoration(
                         labelText: "Search by name & details",
                         hintText: "Hundai, EV, etc",
@@ -74,7 +85,7 @@ class _SearchScreenState extends State<SearchScreen> {
                       Icons.filter_alt_outlined,
                       color: Theme.of(context).primaryColor,
                     ),
-                    itemBuilder: (context) => [
+                    itemBuilder: (BuildContext context) => [
                       PopupMenuItem(
                         child: InkWell(
                           onTap: () async {
@@ -85,14 +96,17 @@ class _SearchScreenState extends State<SearchScreen> {
                                 lastDate: DateTime(2100));
 
                             if (pickedDate != null) {
-                              print(pickedDate);
-                              // String tempDate = DateFormat("yyyy-MM-dd ")
-                              //     .parse(pickedDate);
+                              final DateFormat formatter =
+                                  DateFormat("yyyy-MM-dd");
+                              final String formatted =
+                                  formatter.format(pickedDate);
 
                               carViewModel.fetchProductData(SearchParams(
                                   searchText: '',
-                                  dateTime: pickedDate.toString(),
+                                  dateTime: formatted.toString(),
                                   isSorted: false));
+
+                              Navigator.pop(context);
                             } else {}
                           },
                           child: const Icon(Icons.date_range),
@@ -103,6 +117,7 @@ class _SearchScreenState extends State<SearchScreen> {
                           onTap: () {
                             carViewModel.fetchProductData(SearchParams(
                                 searchText: '', dateTime: '', isSorted: true));
+                            Navigator.pop(context);
                           },
                           child: const Text("A-Z"),
                         ),

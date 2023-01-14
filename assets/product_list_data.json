@@ -1,56 +1,67 @@
 {
-     "products": [
-                {
-                    "name": "Keshab",
-                    "detail": "BDetails2",
-                    "image": "image",
-                    "date-added": "2023-01-10"
-                },
-                {
-                    "name": "Product Name",
-                    "detail": "ADetails4",
-                    "image": "image",
-                    "date-added": "2013-01-05"
-                },
-                {
-                    "name": "Product Name",
-                    "detail": "CDetails3",
-                    "image": "image",
-                    "date-added": "2017-10-11"
-                },  {
-                    "name": "Keshab",
-                    "detail": "BDetails2",
-                    "image": "image",
-                    "date-added": "2021-12-11"
-                },
-                {
-                    "name": "Product Name",
-                    "detail": "ADetails4",
-                    "image": "image",
-                    "date-added": "2013-01-05"
-                },
-                {
-                    "name": "Product Name",
-                    "detail": "CDetails3",
-                    "image": "image",
-                    "date-added": "2017-10-11"
-                },  {
-                    "name": "Keshab",
-                    "detail": "BDetails2",
-                    "image": "image",
-                    "date-added": "2021-12-11"
-                },
-                {
-                    "name": "Product Name",
-                    "detail": "ADetails4",
-                    "image": "image",
-                    "date-added": "2013-01-05"
-                },
-                {
-                    "name": "Product Name",
-                    "detail": "CDetails3",
-                    "image": "image",
-                    "date-added": "2017-10-11"
-                }
-            ]
+  "products": [
+    {
+      "name": "Ford Mustang",
+      "released_date": "1964-04-05",
+      "description": "The Ford Mustang is an American classic muscle car. It has a powerful V8 engine and sporty design.",
+      "price": "$26,670",
+      "image": "https://images.pexels.com/photos/210019/pexels-photo-210019.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "name": "Chevrolet Camaro",
+      "released_date": "2023-01-12",
+      "description": "The Chevrolet Camaro is a sports car that offers thrilling performance and bold styling. It has a variety of engine options, including a powerful V8.",
+      "price": "$25,000",
+      "image": "https://images.pexels.com/photos/1637859/pexels-photo-1637859.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+      "name": "Dodge Challenger",
+      "released_date": "2023-01-09",
+      "description": "The Dodge Challenger is a classic American muscle car with a powerful V8 engine and bold design. It offers a variety of trim levels and performance options.",
+      "price": "$28,995",
+      "image": "https://images.pexels.com/photos/1805053/pexels-photo-1805053.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+      "name": "Tesla Model S",
+      "released_date": "2023-01-13",
+      "description": "The Tesla Model S is a full-sized electric luxury sedan, with sleek design and cutting-edge technology. It has a range of up to 373 miles on a single charge.",
+      "price": "$79,990",
+      "image": "https://images.pexels.com/photos/70912/pexels-photo-70912.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+      "name": "Audi i3",
+      "released_date": "2023-01-02",
+      "description": "The BMW i3 is a compact electric car with a sleek, futuristic design. It has a range of up to 153 miles on a single charge.",
+      "price": "$44,450",
+      "image": "https://images.pexels.com/photos/909907/pexels-photo-909907.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+      "name": "Jaguar I-PACE",
+      "released_date": "2023-01-14",
+      "description": "The Jaguar I-PACE is a luxury electric SUV with a sleek, sporty design. It has a range of up to 292 miles on a single charge.",
+      "price": "$69,850",
+      "image": "https://images.pexels.com/photos/358070/pexels-photo-358070.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+       {
+      "name": "Dodge Challenger",
+      "released_date": "2023-01-09",
+      "description": "The Dodge Challenger is a classic American muscle car with a powerful V8 engine and bold design. It offers a variety of trim levels and performance options.",
+      "price": "$28,995",
+      "image": "https://images.pexels.com/photos/1805053/pexels-photo-1805053.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+      "name": "Tesla Model S",
+      "released_date": "2023-01-13",
+      "description": "The Tesla Model S is a full-sized electric luxury sedan, with sleek design and cutting-edge technology. It has a range of up to 373 miles on a single charge.",
+      "price": "$79,990",
+      "image": "https://images.pexels.com/photos/70912/pexels-photo-70912.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+      "name": "Audi i3",
+      "released_date": "2023-01-02",
+      "description": "The BMW i3 is a compact electric car with a sleek, futuristic design. It has a range of up to 153 miles on a single charge.",
+      "price": "$44,450",
+      "image": "https://images.pexels.com/photos/909907/pexels-photo-909907.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    }
+  ]
 }

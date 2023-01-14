@@ -1,6 +1,7 @@
 import 'package:car_app/repository/apiResponse/car_model.dart';
 import 'package:car_app/repository/constants/base_widget.dart';
 import 'package:car_app/view/widgets/carlist_grid.dart';
+import 'package:car_app/view/widgets/text_describe.dart';
 import 'package:flutter/material.dart';
 
 class CategoryMenu extends StatefulWidget {
@@ -38,8 +39,8 @@ class _CategoryMenuState extends State<CategoryMenu> {
                         },
                         child: Container(
                           padding: EdgeInsets.symmetric(
-                            vertical: config.appVerticalPadding(2),
-                            horizontal: config.appHorizontalPadding(6),
+                            vertical: config.appVerticalPadding(1),
+                            horizontal: config.appHorizontalPadding(4),
                           ),
                           decoration: BoxDecoration(
                               color: Theme.of(context).primaryColorLight,
@@ -50,7 +51,7 @@ class _CategoryMenuState extends State<CategoryMenu> {
                                 .textTheme
                                 .caption
                                 ?.copyWith(
-                                    color: theme.primaryColor, fontSize: 18),
+                                    color: theme.primaryColor, fontSize: 17),
                           ),
                         ),
                       ),
@@ -60,7 +61,28 @@ class _CategoryMenuState extends State<CategoryMenu> {
                 }),
               ),
             ),
-            config.verticalSpaceLarge(),
+            config.verticalSpaceMedium(),
+            Row(
+              children: [
+                const Text(
+                  "Category: ",
+                  overflow: TextOverflow.ellipsis,
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17),
+                ),
+                const SizedBox(
+                  width: 10,
+                ),
+                Text(
+                  "${widget.categories[categoriesIndex].title}",
+                  overflow: TextOverflow.ellipsis,
+                  style: Theme.of(context).textTheme.bodyText1!.copyWith(
+                      fontWeight: FontWeight.w600,
+                      color: Theme.of(context).primaryColor,
+                      fontSize: 17),
+                )
+              ],
+            ),
+            config.verticalSpaceMedium(),
             Builder(
               builder: (context) {
                 List<Products> products =

@@ -3,6 +3,7 @@ import 'package:car_app/repository/apiResponse/product_model.dart';
 import 'package:car_app/repository/api_request/search_params.dart';
 import 'package:car_app/repository/constants/base_widget.dart';
 import 'package:car_app/repository/constants/cached_network_image_builder.dart';
+import 'package:car_app/view/widgets/text_describe.dart';
 import 'package:car_app/viewModel/car_view_model.dart';
 
 import 'package:flutter/material.dart';
@@ -54,11 +55,14 @@ class _ProductListState extends State<ProductList> {
                         child: Column(
                           mainAxisSize: MainAxisSize.min,
                           children: [
-                            SizedBox(
-                              height: 98,
-                              child: CustomCachedNetworkImage(
-                                product.image,
-                                fit: BoxFit.cover,
+                            Center(
+                              child: SizedBox(
+                                height: 98,
+                                width: 150,
+                                child: CustomCachedNetworkImage(
+                                  product.image,
+                                  fit: BoxFit.fill,
+                                ),
                               ),
                             ),
                             config.verticalSpaceSmall(),
@@ -69,35 +73,30 @@ class _ProductListState extends State<ProductList> {
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Text(
-                                    // product.name.toString(),
+                                  Center(
+                                    child: Text(
+                                      // product.name.toString(),
 
-                                    product.name!, maxLines: 1,
-                                    overflow: TextOverflow.ellipsis,
-                                    style: Theme.of(context)
-                                        .textTheme
-                                        .bodyText2!
-                                        .copyWith(fontWeight: FontWeight.w600),
+                                      product.name!, maxLines: 1,
+                                      overflow: TextOverflow.ellipsis,
+                                      textAlign: TextAlign.center,
+                                      style: Theme.of(context)
+                                          .textTheme
+                                          .bodyText2!
+                                          .copyWith(
+                                              fontWeight: FontWeight.w600,
+                                              fontSize: 17),
+                                    ),
                                   ),
-                                  config.verticalSpaceVerySmall(),
-                                  Text(
-                                    product.dateAdded!,
-                                    maxLines: 1,
-                                    overflow: TextOverflow.ellipsis,
-                                    style: Theme.of(context)
-                                        .textTheme
-                                        .bodyText2!
-                                        .copyWith(fontWeight: FontWeight.w600),
+                                  config.verticalSpaceSmall(),
+                                  NameDescribe(
+                                    topic: 'Date:',
+                                    data: product.dateAdded,
                                   ),
-                                  config.verticalSpaceVerySmall(),
-                                  Text(
-                                    product.detail.toString(),
-                                    style: Theme.of(context)
-                                        .textTheme
-                                        .bodyText2!
-                                        .copyWith(
-                                            color:
-                                                Theme.of(context).primaryColor),
+                                  config.verticalSpaceSmall(),
+                                  NameDescribe(
+                                    topic: 'Car Price:',
+                                    data: product.detail,
                                   ),
                                 ],
                               ),

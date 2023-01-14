@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:car_app/repository/apiResponse/car_model.dart';
+import 'package:car_app/repository/constants/base_widget.dart';
 import 'package:car_app/repository/constants/size_config.dart';
 import 'package:car_app/repository/constants/ui_assets.dart';
 import 'package:car_app/view/screens/appbar_home.dart';
@@ -105,14 +106,24 @@ class _HomeScreenState extends State<HomeScreen> {
         if (result.hasData) {
           List<Categories> categories = result.data;
 
-          return Column(
-            children: [
-              config.verticalSpaceMedium(),
-              CategoryMenu(
-                categories: categories,
+          return BaseWidget(builder: (context, config, theme) {
+            return Container(
+              padding: EdgeInsets.symmetric(
+                  horizontal: config.appHorizontalPaddingMedium()),
+              child: Column(
+                children: [
+                  Column(
+                    children: [
+                      config.verticalSpaceMedium(),
+                      CategoryMenu(
+                        categories: categories,
+                      ),
+                    ],
+                  ),
+                ],
               ),
-            ],
-          );
+            );
+          });
         } else {
           return const Center(
             child: CircularProgressIndicator(),

@@ -10,17 +10,17 @@ class ProductListModel {
 
   ProductListModel.fromJson(Map<String, dynamic> json) {
     name = json['name'];
-    detail = json['detail'];
+    detail = json['price'];
     image = json['image'];
-    dateAdded = json['date-added'];
+    dateAdded = json['released_date'];
   }
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
     data['name'] = this.name;
-    data['detail'] = this.detail;
+    data['price'] = this.detail;
     data['image'] = this.image;
-    data['date-added'] = this.dateAdded;
+    data['released_date'] = this.dateAdded;
     return data;
   }
 }
